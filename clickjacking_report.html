@@ -1,0 +1,75 @@
+
+    <html>
+    <head>
+    <title>Clickjacking Security Report</title>
+    <style>
+    body{
+        font-family: Arial;
+        margin:40px;
+        background:#f5f5f5;
+    }
+
+    h1{
+        color:#333;
+    }
+
+    .safe{
+        color:green;
+        font-weight:bold;
+    }
+
+    .vulnerable{
+        color:red;
+        font-weight:bold;
+    }
+
+    .box{
+        background:white;
+        padding:20px;
+        margin:15px 0;
+        border-radius:8px;
+        box-shadow:0px 2px 5px rgba(0,0,0,0.2);
+    }
+    </style>
+    </head>
+
+    <body>
+
+    <h1>Website Clickjacking Security Report</h1>
+
+    <p>This report checks whether websites are protected against
+    <b>Clickjacking attacks</b>.</p>
+
+    <p>Clickjacking happens when attackers load a website inside an invisible
+    frame and trick users into clicking something malicious.</p>
+
+    <h2>Scan Results</h2>
+    
+            <div class="box">
+            <h3>google.com</h3>
+            <p class="safe">✔ Protected</p>
+            <p>This website uses security headers that help prevent clickjacking attacks.</p>
+            </div>
+            
+            <div class="box">
+            <h3>facebook.com</h3>
+            <p class="safe">✔ Protected</p>
+            <p>This website uses security headers that help prevent clickjacking attacks.</p>
+            </div>
+            
+            <div class="box">
+            <h3>example.com</h3>
+            <p class="vulnerable">⚠ Vulnerable to Clickjacking</p>
+            <p>This website does not use the <b>X-Frame-Options</b> security header,
+            meaning it could potentially be embedded inside malicious pages.</p>
+            </div>
+            
+            <div class="box">
+            <h3>github.com</h3>
+            <p class="safe">✔ Protected</p>
+            <p>This website uses security headers that help prevent clickjacking attacks.</p>
+            </div>
+            
+    </body>
+    </html>
+    
